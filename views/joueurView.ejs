@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Joueur</title>
+        <meta name="description" content="joueur">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+    <body>  
+
+        <header>
+            <div class="topnav">
+                <a href="/club">Liste club</a>
+                <a href="/" class="active"> Liste des joueurs</a>
+                <a href="/joueur/add" > Nouveau Joueur</a>
+            </div>
+        </header>
+
+        <div class="jumbotron">
+            <h1 class="display-4">Bienvenue sur Soccer Recruiter</h1>
+            <p class="lead">
+                   Application qui permet aux recruteurs de rentrer les informations des
+                   joueurs pour lesquels ils sont intéressés : Nom, prénom, âge, taille et poids. Et de mettre une
+                   note pour les critères physiques suivants : Force, vision de jeu et endurance. En fonction des
+                   critères de sélection des recruteurs et de l’évolution du joueur, le recruteur pourra lire,
+                   ajouter, supprimer et modifier les notes attribuées.
+            </p>
+        </div>
+
+        
+        <div class="card-deck">
+            
+            <% for (let i = 0 ;  i < joueurs.length ; i++) { %>
+            <div class="card">
+                <img class="card-img-top" src="/images/football-card.jpg">
+                <div class="card-body">
+                    <h5 class="card-title"> <%= joueurs[i].nom%> <%= joueurs[i].prenom%></h5>
+                    <p class="card-text">Club : <%= joueurs[i].nomClub%></p>
+                        <a class="btn btn-warning" href="/joueur/update/<%= joueurs[i].idjoueur %>">Modifier</a> 
+                        <a class="btn btn-danger" href="/joueur/delete/<%= joueurs[i].idjoueur %>">Effacer</a>
+                </div> 
+            </div>
+            <% } %>
+        </div>
+
+
+
+    </body>  
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Joueur</title>
+    <meta name="description" content="Joueur">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="page-add">
+
+        <header>
+            <div class="topnav">
+                <a href="/club">Liste club</a>
+                <a href="/"> Liste des joueurs</a>
+                <a href="/joueur/add" class="active"> Nouveau Joueur</a>
+
+            </div>
+        </header>
+
+
+
+        <div class="form-add">
+            <div class="container-add">
+                <h1 class="new-joueur-title">Ajouter un joueur</h1>
+                <form action="/joueur/new" method="POST">
+
+                    <div>
+                        <h2>Informations</h2>
+                        <label class="form-label" for="nom">Nom :</label>
+                        <input class="form-control" type="text" id="nom" name="nom" value="<%= nom %>" required>
+
+                        <label class="form-label" for="prenom">Prenom :</label>
+                        <input class="form-control" type="text" id="prenom" name="prenom" value="<%= prenom %>" required>
+
+                        <label class="form-label" for="age">Age :</label>
+                        <input class="form-control" type="number" id="age" name="age" value="<%= age %>" required>
+
+                        <label class="form-label" for="poids">Poids :</label>
+                        <input class="form-control" type="number" id="poids" name="poids" value="<%= poids %>" required>
+
+                        <label class="form-label" for="taille">Taille :</label>
+                        <input class="form-control" type="number" id="taille" name="taille" value="<%= taille %>" required>
+
+                    </div>
+                    <div>
+                        <h2>Critères</h2>
+                        <label class="form-label" for="force">Force :</label>
+                        <input class="form-control" type="number" id="force" name="force" value="<%= force %>" required>
+
+                        <label class="form-label" for="endurance">Endurance :</label>
+                        <input class="form-control" type="number" id="endurance" name="endurance" value="<%= endurance %>" required>
+
+                        <label class="form-label" for="vision">Vision :</label>
+                        <input class="form-control" type="number" id="vision" name="vision" value="<%= vision %>" required>
+
+                    </div>
+
+                    <div>
+                        <h2>Clubs</h2>
+                        <div class="select">
+                            <select class="form-select" name="club" size="<%= clubsList.length %>">
+                                <% for (let i=0 ; i < clubsList.length ; i++) { %>
+                                    <option value="<%= clubsList[i].idclub%>">
+                                        <%= clubsList[i].nomClub%>
+                                    </option>
+                                    <% } %>
+                            </select>
+                        </div>
+                    </div>
+
+                    <input class="form-control" type="hidden" name="idjoueur" value="<%= idjoueur %>">
+                        <button class="btn btn-success" type="submit">Ajouter</button>
+                        <button class="btn btn-danger" onclick="location.href='/';">Annuler</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
