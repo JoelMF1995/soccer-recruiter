@@ -16,10 +16,12 @@
 
         <header>
             <div class="topnav">
+                <div class="container">
+                <a href="/"> <img src="/images/logo.png"> </a>
                 <a href="/club">Liste club</a>
-                <a href="/"> Liste des joueurs</a>
-                <a href="/joueur/add" class="active"> Nouveau Joueur</a>
-
+                <a href="/" class="active"> Liste des joueurs</a>
+                <a href="/joueur/add" > Nouveau Joueur</a>
+                </div>
             </div>
         </header>
 
@@ -48,6 +50,7 @@
                         <input class="form-control" type="number" id="taille" name="taille" value="<%= taille %>" required>
 
                     </div>
+                    <br>
                     <div>
                         <h2>Critères</h2>
                         <label class="form-label" for="force">Force :</label>
@@ -75,6 +78,7 @@
                     </div>
 
                     <input class="form-control" type="hidden" name="idjoueur" value="<%= idjoueur %>">
+                        <br>
                         <button class="btn btn-success" type="submit">Ajouter</button>
                         <button class="btn btn-danger" onclick="location.href='/';">Annuler</button>
                 </form>

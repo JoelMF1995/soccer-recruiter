@@ -13,29 +13,32 @@
         <link rel="stylesheet" href="/css/style.css">
     </head>
 
-    <body>  
-
+    <body>
         <header>
             <div class="topnav">
+                <div class="container">
+                <a href="/"> <img src="/images/logo.png"> </a>
                 <a href="/club">Liste club</a>
                 <a href="/" class="active"> Liste des joueurs</a>
                 <a href="/joueur/add" > Nouveau Joueur</a>
+                </div>
             </div>
         </header>
-
         <div class="jumbotron">
-            <h1 class="display-4">Bienvenue sur Soccer Recruiter</h1>
-            <p class="lead">
-                   Application qui permet aux recruteurs de rentrer les informations des
-                   joueurs pour lesquels ils sont intéressés : Nom, prénom, âge, taille et poids. Et de mettre une
-                   note pour les critères physiques suivants : Force, vision de jeu et endurance. En fonction des
-                   critères de sélection des recruteurs et de l’évolution du joueur, le recruteur pourra lire,
-                   ajouter, supprimer et modifier les notes attribuées.
-            </p>
+            <div class="container">
+                <h1 class="display-4">Bienvenue sur Soccer Recruiter</h1>
+                <p class="lead">
+                       Application qui permet aux recruteurs de rentrer les informations des
+                       joueurs pour lesquels ils sont intéressés : Nom, prénom, âge, taille et poids. Et de mettre une
+                       note pour les critères physiques suivants : Force, vision de jeu et endurance. En fonction des
+                       critères de sélection des recruteurs et de l’évolution du joueur, le recruteur pourra lire,
+                       ajouter, supprimer et modifier les notes attribuées.
+                </p>
+            </div>
         </div>
 
         
-        <div class="card-deck">
+        <div class="card-deck container">
             
             <% for (let i = 0 ;  i < joueurs.length ; i++) { %>
             <div class="card">
@@ -49,8 +52,6 @@
             </div>
             <% } %>
         </div>
-
-
 
     </body>  
 

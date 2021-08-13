@@ -1,18 +1,38 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 1800px;
-    margin: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
   }
-  
+
+@media (min-width: 800px) {
+  body {
+    width: auto !important;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+  .container {
+    max-width: 960px;
+  }
+
+  .jumbotron {
+    background: #e9e5e1;
+    padding: 24px;
+  }
+
   .topnav {
     overflow: hidden;
-    background-color:  #e47133;
-    padding-right: 360px;
+    background-color:  #201e20;
     box-shadow: 1px 1px 12px #555;
+  }
+
+  .topnav a img {
+    max-width: 62px;
   }
   
   .topnav a {
-    float: right;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
@@ -21,13 +41,8 @@ body {
   }
   
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: #e9e5e1;
     color: black;
-  }
-  
-  .topnav a.active {
-    background-color : #702d09;
-    color: white;
   }
   
   .new-joueur-title {
@@ -58,7 +73,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background: #af3e02;
+    background: #e9e5e1;
     box-shadow: 0px 0px 12px #555;
   }
   
@@ -117,7 +132,7 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: rgb(201, 111, 26);
+    background-color: #201e20;
     color: white;
   }
   
@@ -129,4 +144,3 @@ body {
         margin-right: auto;
     } 
   }
- 

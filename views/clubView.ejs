@@ -14,9 +14,12 @@
 
         <header>
             <div class="topnav">
-                <a href="/club" class="active">Liste club</a>
-                <a href="/"> Liste des joueurs</a>
+                <div class="container">
+                <a href="/"> <img src="/images/logo.png"> </a>
+                <a href="/club">Liste des clubs</a>
+                <a href="/" class="active"> Liste des joueurs</a>
                 <a href="/joueur/add" > Nouveau Joueur</a>
+                </div>
             </div>
         </header>
     
@@ -41,7 +44,7 @@
                     <% } %>
 
         </table>
-
+        <br>
         <div style="width:50%; margin:auto">
             <form action="/club/new" method="POST">
                 <div>
@@ -50,6 +53,7 @@
                 </div>
                 <div>
                     <input type="hidden" name="idclub" value="<%= idclub %>">
+                    <br>
                     <div class="buttons">
                         <button class="btn btn-success" type="submit">Ajouter</button>
                         <button class="btn btn-danger" onclick="location.href='/club';return false;">Annuler</button>
