@@ -7,7 +7,7 @@ exports.joueurList = function (req, res) {
 
     var sql = "SELECT * FROM joueur";
 
-    connection.query(sql, function (error, resultSQL) //--> connection.query permet de faire un appel vers une BDD {
+    connection.query(sql, function (error, resultSQL) { //--> connection.query permet de faire un appel vers une BDD {
         if (error) {
             res.status(400).json({'message': error});
         }
@@ -42,7 +42,7 @@ exports.joueurNew = function (req, res) {
     });
 }
 
-exports.joueurUpdate = function (req, res) //--> permet d'extraire les informations, params --> recuperer dans l'url et le reste dans le {
+exports.joueurUpdate = function (req, res) { //--> permet d'extraire les informations, params --> recuperer dans l'url et le reste dans le {
     let idjoueur = req.params.idjoueur;
     let nom = req.body.nom;
     let prenom = req.body.prenom;
