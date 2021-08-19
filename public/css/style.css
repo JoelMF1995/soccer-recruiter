@@ -26,6 +26,7 @@ body {
     overflow: hidden;
     background-color:  #201e20;
     box-shadow: 1px 1px 12px #555;
+    text-align: center;
   }
 
   .topnav a img {
@@ -90,7 +91,7 @@ body {
   
   @media screen and (max-width: 600px) {
     .card {
-      width: 100%;
+      width: 90%;
       display: block;
       margin-bottom: 20px;
     }
@@ -118,6 +119,12 @@ body {
     margin:auto;
     margin-top:40px;
   }
+
+  @media screen and (max-width: 730px) {
+    table {
+      width: initial;
+    }
+  }
   
   table td, table th {
     border: 1px solid #ddd;
@@ -144,3 +151,16 @@ body {
         margin-right: auto;
     } 
   }
+
+@media screen and (max-width:650px) {
+  .brand {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width:420px) {
+  .container-add {
+    padding: 55px 40px 68px 40px;
+  }
+}
