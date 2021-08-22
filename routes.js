@@ -14,6 +14,7 @@ router.get('/', (request, response) => response.redirect('/joueur'));
 // Les routes API - JOUEUR
 
 // Renvoie la liste des joueurs 
+// '/api/joueur' permet de définir le chemin et joueurnew est une méthode
 router.get('/api/joueur', joueurControllerApi.joueurList);
 // Route POST pour créer un nouveau joueur - Renvoie une reponse en json en cas de succès
 router.post('/api/joueur/add', joueurControllerApi.joueurNew);

@@ -41,7 +41,7 @@ body {
     font-size: 17px;
   }
   
-  .topnav a:hover {
+  .topnav a.menu:hover {
     background-color: #e9e5e1;
     color: black;
   }
@@ -142,7 +142,21 @@ body {
     background-color: #201e20;
     color: white;
   }
-  
+
+  .card-deck {
+    overflow: hidden;
+  }
+
+  #club-list {
+    min-height: 80vh;
+  }
+
+  footer {
+    background: #201e20;
+    color: white;
+    text-align: center;
+  }
+
 
   @media (min-width:800px) {
     body {
